@@ -11,5 +11,5 @@ object Funcs {
     x.toDouble
   }
 
-  val z = g compose f
+  val z : A => C = g compose f
 }
