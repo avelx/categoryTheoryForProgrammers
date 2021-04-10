@@ -1,0 +1,32 @@
+*.class
+*.log
+*.iml
+terraform/.terraform/*
+terraform/.terraform/plugins/*
+# sbt specific
+.cache/
+.history/
+.lib/
+.idea/
+../.idea/
+../.lib/
+../history/
+../.cache/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+.idea/
+terraform.tfstate
+.terraform.tfstate.lock.info
+.idea/vcs.xml
+.idea/modules
+.idea/modules/GSOD.iml
+.idea/modules/GSOD-build.iml
+terraform/terraform.tfstate.backup
