@@ -22,4 +22,22 @@ object Rosalind {
         acc :+ c
       }
     }.mkString("")
+
+ def reverseComplement(dna: String) : String = {
+   val mapping: Map[Char, Char] = Map(
+     'T' -> 'A',
+     'A' -> 'T',
+     'C' -> 'G',
+     'G' -> 'C'
+   )
+   dna
+     .reverse
+     .foldLeft( List[Char]() ){ (acc, c) =>
+     if (mapping.contains(c)){
+       acc :+ mapping(c)
+     } else {
+       acc :+ c
+     }
+   }.mkString("")
+ }
 }

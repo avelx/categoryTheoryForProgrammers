@@ -13,7 +13,14 @@ class RosalindSpec extends AnyFunSuite {
     val in = "GATGGAACTTGACTACGTAAATT"
     val actual = transcribingToRna(in)
     val expected = "GAUGGAACUUGACUACGUAAAUU"
-    actual should be eq expected
+    actual shouldBe expected
+  }
+
+  test("Reverse complement") {
+    val in = "AAAACCCGGT"
+    val actual = reverseComplement(in)
+    val expected = "ACCGGGTTTT"
+    actual shouldBe expected
   }
 
 }
