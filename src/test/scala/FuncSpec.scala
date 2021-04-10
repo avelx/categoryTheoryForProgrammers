@@ -17,4 +17,8 @@ object FuncSpec extends Properties("Funcs") {
     z(x) == x.toDouble
   }
 
+  property("function composition: associative") = forAll { x: Int =>
+    hgf1(x) == hgf2(x) && hgf2(x) == hgf3(x) && hgf3(x) == hgf1(x)
+  }
+
 }
