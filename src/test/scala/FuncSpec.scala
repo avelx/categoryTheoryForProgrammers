@@ -21,4 +21,8 @@ object FuncSpec extends Properties("Funcs") {
     hgf1(x) == hgf2(x) && hgf2(x) == hgf3(x) && hgf3(x) == hgf1(x)
   }
 
+  property("identity function") = forAll { x: Int =>
+    (f compose identity[A])(x) == f(x) && (identity[B] _ compose f)(x) == f(x)
+  }
+
 }

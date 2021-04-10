@@ -23,4 +23,5 @@ object Funcs {
   val hgf2 = (h compose g) compose f
   val hgf3 = h compose g compose f
 
+  def identity[A](x: A): A = x
 }
