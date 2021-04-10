@@ -9,4 +9,11 @@ class RosalindSpec extends AnyFunSuite {
     actual should be eq  ("A" -> 20, "C" -> 12, "G" -> 17, "T" -> 21)
   }
 
+  test("Transcribing DNA into RNA") {
+    val in = "GATGGAACTTGACTACGTAAATT"
+    val actual = transcribingToRna(in)
+    val expected = "GAUGGAACUUGACUACGUAAAUU"
+    actual should be eq expected
+  }
+
 }

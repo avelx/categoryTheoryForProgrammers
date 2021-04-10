@@ -13,4 +13,13 @@ object Rosalind {
       }
     }
   }
+
+  def transcribingToRna(dna:String): String =
+    dna.foldLeft( List[Char]()){ (acc, c) =>
+      if (c == 'T'){
+        acc :+ 'U'
+      } else {
+        acc :+ c
+      }
+    }.mkString("")
 }
