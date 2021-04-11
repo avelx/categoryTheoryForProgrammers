@@ -1,3 +1,5 @@
+import scala.collection.mutable.ListBuffer
+
 object Rosalind {
   def countNucleotides(in: String)
                       (alphabet: Seq[Char]): Map[String, Int] = {
@@ -40,7 +42,6 @@ object Rosalind {
         }
       }.mkString("")
   }
-
 
 
 }
