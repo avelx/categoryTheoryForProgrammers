@@ -23,4 +23,6 @@ class RosalindSpec extends AnyFunSuite {
     actual shouldBe expected
   }
 
+
+
 }
