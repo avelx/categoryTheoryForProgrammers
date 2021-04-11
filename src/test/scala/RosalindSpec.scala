@@ -23,6 +23,10 @@ class RosalindSpec extends AnyFunSuite {
     actual shouldBe expected
   }
 
-
+  test("hammingDistance") {
+    val a = "GAGCCTACTAACGGGAT"
+    val b = "CATCGTAATGACGGCCT"
+    hammingDistance(a, b) shouldBe 7
+  }
 
 }

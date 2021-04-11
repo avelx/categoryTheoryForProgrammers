@@ -43,5 +43,15 @@ object Rosalind {
       }.mkString("")
   }
 
+  // Problem: http://rosalind.info/problems/hamm/
+  def hammingDistance(a: String, b: String): Int = {
+    var count = 0
+    for {
+      i <- 0 to a.length - 1
+      if a(i) != b(i)
+    } yield count += 1
+    count
+  }
+
 
 }
