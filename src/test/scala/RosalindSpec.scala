@@ -33,4 +33,12 @@ class RosalindSpec extends AnyFunSuite {
     assert( mendelFirstLaw(2, 2, 2) == 0.783333333333333 )
   }
 
+  test("transalte RNA") {
+    val in = "AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA"
+    val res = translateRna( in )
+      .filter(_ != "Stop")
+      .mkString("")
+    assert(res == "MAMAPRTEINSTRING")
+  }
+//MAMAPRTEINSTRING
 }

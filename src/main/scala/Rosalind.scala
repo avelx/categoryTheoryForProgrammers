@@ -64,4 +64,20 @@ object Rosalind {
     1 - a - 2 * b - c
   }
 
+  //
+  def translateRna(rna: String) : List[String] = {
+    val fileName = "/Users/pavel/devcore/playground/categoryTheoryForProgrammers/src/main/resources/rnaCodonsToaacids.txt"
+    val lines = scala.io.Source.fromFile(fileName).getLines()
+    val mapping = lines.toList.map(s => {
+      val p = s.trim.split(" ")
+      p(0) -> p(1)
+    }).toMap
+
+    val res = for {
+      triple <- rna.sliding(3, 3)
+      x = mapping(triple)
+    } yield x
+    res.toList
+  }
+
 }
