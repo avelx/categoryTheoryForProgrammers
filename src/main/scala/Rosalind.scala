@@ -53,5 +53,15 @@ object Rosalind {
     count
   }
 
+  // http://rosalind.info/problems/iprb/
+  def mendelFirstLaw(k: Int, m: Int, n: Int): Double = {
+    val s = k.toDouble + m.toDouble + n.toDouble
+
+    val a : Double = n.toDouble * (n.toDouble -1) /( s *(s -1) )
+    val b : Double = 0.5 * m * n/(s * (s -1) )
+    val c : Double = 0.25 * m * (m-1)/(s * (s -1) )
+
+    1 - a - 2 * b - c
+  }
 
 }

@@ -29,4 +29,8 @@ class RosalindSpec extends AnyFunSuite {
     hammingDistance(a, b) shouldBe 7
   }
 
+  test("mendelFirstLaw") {
+    assert( mendelFirstLaw(2, 2, 2) == 0.783333333333333 )
+  }
+
 }
