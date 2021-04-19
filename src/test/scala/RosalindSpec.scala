@@ -40,5 +40,10 @@ class RosalindSpec extends AnyFunSuite {
       .mkString("")
     assert(res == "MAMAPRTEINSTRING")
   }
-//MAMAPRTEINSTRING
+
+  test("string occurances") {
+    val a = "GATATATGCATATACTT"
+    val b = "ATAT"
+    assert( occurancesIndex(a, b) == List(2, 4, 10) )
+  }
 }

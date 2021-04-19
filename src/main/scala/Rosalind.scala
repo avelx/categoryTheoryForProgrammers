@@ -80,4 +80,19 @@ object Rosalind {
     res.toList
   }
 
+  def occurancesIndex(a: String, b: String): List[Int] = {
+    val res = ListBuffer[Int]()
+    a.foldLeft( (0, List[Char]() ) ){ (acc, c) =>
+      if (acc._2.mkString("") == b){
+        res.append(acc._1 + 1)
+      }
+      if (acc._2.length == b.length){
+        (acc._1 + 1, acc._2.tail :+ c)
+      } else {
+        (acc._1, acc._2 :+ c)
+      }
+    }
+    res.toList
+  }
+
 }
