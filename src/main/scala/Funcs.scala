@@ -24,4 +24,26 @@ object Funcs {
   val hgf3 = h compose g compose f
 
   def identity[A](x: A): A = x
+
+  val fact = (n: Int) => (1 to n).product
+
+  //def absurd[A] : Nothing => A
+
+  def unit[A]: A => Unit = _ => ()
+
+  sealed trait Bool
+  case object True extends Bool
+  case object False extends Bool
+
+  trait Monoid[M] {
+    def combine(m1: M, m2: M): M
+    def empty: M
+  }
+
+  object Monoid {
+    implicit val stringMonoid : Monoid[String] = new Monoid[String] {
+      override def combine(m1: String, m2: String): String = m1 + m2
+      override def empty: String = ""
+    }
+  }
 }
